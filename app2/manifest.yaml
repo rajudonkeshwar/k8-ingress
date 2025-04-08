@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app2
-        image: joindevops/app2:1.0.0
+        image: rajudonkeshwar/app2:1.0.0
         ports:
         - containerPort: 80
 ---
@@ -41,12 +41,12 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:315069654700:certificate/c565ac42-ac77-4cb4-beb5-8f915ffaa11a
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:445567090602:certificate/e1390009-8894-48f3-9a6c-4d6bacd4c807
     alb.ingress.kubernetes.io/group.name: joindevops
 spec:
   ingressClassName: alb
   rules:
-  - host: "app2.daws82s.online"
+  - host: "app2.vijaychandra.site"
     http:
       paths:
       - pathType: Prefix
