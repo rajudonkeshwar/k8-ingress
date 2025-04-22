@@ -6,14 +6,14 @@ ACC_ID=315069654700
 
 ### Permissions
 
-* OIDC provider
+* OIDC provider ( It is a authentication service to connect the aws and eks platforms, for              iam integration  purpose)
 ```
 eksctl utils associate-iam-oidc-provider \
     --region $REGION_CODE \
     --cluster $CLUSTER_NAME \
     --approve
 ```
-* IAM Policy
+* IAM Policy ( If eks wants to create resources in aws it has to take some permissions through IAM policy )
 ```
 curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.12.0/docs/install/iam_policy.json
 ```
